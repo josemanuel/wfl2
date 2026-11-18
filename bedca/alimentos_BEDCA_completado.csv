@@ -1,0 +1,107 @@
+id;grupo;alimento_en_los_menus;busqueda_bedca_sugerida;estado_asumido_en_el_menu;fuente_dato;receta_id;kcal_100g;proteina_g_100g;hidratos_g_100g;grasa_g_100g;gramos_por_unidad;notas
+A01;Proteína animal;Huevo entero;huevo entero;crudo, sin cáscara;BEDCA;;148.9;12.5;;11.1;50.0;Menús en unidades (2 huevos): anotar g por unidad comestible | BEDCA: Huevo de gallina fresco. ~50 g comestible/unidad
+A02;Proteína animal;Clara de huevo;huevo clara;cruda;BEDCA;;44.8;10.5;0.3;0.1;33.0;"Menús: 3-4 claras; anotar g por clara | BEDCA: Clara cruda. ~33 g/clara"
+A03;Proteína animal;Pechuga de pollo;pollo pechuga sin piel;"crudo (con piel; no hay sin piel crudo)";BEDCA;;104.5;23.1;0.0;1.2;;"Menús: ""150-180 g pollo a la plancha/horno"" | BEDCA 994 Pollo pechuga con piel crudo. Si menús peso cocido a la plancha, usar id 2297 (145 kcal, 22.2p, 6.2g) o ajustar ~20% pérdida."
+A04;Proteína animal;Pavo, carne picada;pavo carne picada;crudo;BEDCA;;157.2;20.2;0.0;8.5;;BEDCA: Pavo crudo (genérico)
+A05;Proteína animal;Pavo, loncha (fiambre);pavo fiambre / pechuga de pavo;tal cual;BEDCA;;146.9;15.3;0.4;9.4;20.0;Menús: 2 lonchas (40 g) | BEDCA: Pavo fiambre. 2 lonchas~40g
+A06;Proteína animal;Ternera magra;ternera magra (redondo/babilla/solomillo);crudo;BEDCA;;109.1;20.2;0.0;3.1;;BEDCA: Ternera solomillo sin grasa crudo
+A07;Proteína animal;Solomillo de cerdo;cerdo solomillo;crudo;BEDCA;;130.4;21.0;0.0;5.1;;BEDCA: Cerdo solomillo crudo
+A08;Proteína animal;Jamón cocido (york);jamón cocido;tal cual;BEDCA;;113.5;21.0;0.4;3.0;;BEDCA: Jamón cocido
+A09;Proteína animal;Jamón serrano;jamón serrano / curado;tal cual;BEDCA;;317.7;28.8;0.2;22.6;;BEDCA: Jamón serrano
+A10;Proteína animal;Chorizo;chorizo;tal cual;BEDCA;;321.7;27.0;1.9;23.1;;20 g en lentejas del menú flexible | BEDCA: Chorizo
+A11;Proteína animal;Merluza;merluza;crudo;BEDCA;;64.4;11.9;0.0;1.8;;"También para ""pescado blanco a la plancha"" | BEDCA: Merluza fresca"
+A12;Proteína animal;Dorada;dorada;crudo;BEDCA;;77.9;17.0;0.0;7.2;;BEDCA: Dorada cruda
+A13;Proteína animal;Salmón;salmón;crudo;BEDCA;;180.9;18.4;0.0;12.0;;BEDCA: Salmón
+A14;Proteína animal;Atún fresco;atún;crudo;BEDCA;;118.6;22.0;0.0;3.3;;"Menú alta proteína: ""180 g atún a la plancha"" | BEDCA: Atún crudo"
+A15;Proteína animal;Atún en conserva al natural;atún en conserva natural;escurrido;BEDCA;;100.8;23.5;0.0;0.6;;"Menú flexible: ""80 g atún"" con pasta | BEDCA: Atún al natural"
+A16;Proteína animal;Sardinas;sardina;crudo;BEDCA;;139.9;18.1;0.0;7.5;;BEDCA: Sardina
+A17;Proteína animal;Gambas;gamba / langostino;crudo, peladas;BEDCA;;89.2;18.0;0.0;1.8;;BEDCA: Gamba roja cruda
+A18;Proteína animal;Marisco variado (mejillón, calamar);"mejillón; calamar";crudo (confirmar);BEDCA;;;;;;;"Dos entradas: usar la media o el que prefieras | Sin media exacta. Mejillón hervido (824): 112 kcal/18.5p; calamar crudo (807): 72 kcal/14p. Dejar vacío."
+A19;Lácteos;Yogur natural;yogur natural;tal cual;BEDCA;;63.3;3.2;3.9;3.9;;BEDCA: Yogur enriquecido natural (aprox. natural)
+A20;Lácteos;Yogur griego 0%;yogur griego (o natural desnatado);tal cual;etiqueta o BEDCA;;138.1;6.4;5.4;10.2;;"En BEDCA puede no existir ""griego"": usar etiqueta | BEDCA: Yogur griego (no 0%; verificar etiqueta si es light)"
+A21;Lácteos;Yogur proteico / skyr;skyr / yogur proteico;tal cual;etiqueta;;;;;;;etiqueta: skyr/yogur proteico comercial
+A22;Lácteos;Queso cottage;queso cottage;tal cual;BEDCA o etiqueta;;;;;;;No en BEDCA. Usar etiqueta cottage
+A23;Lácteos;Requesón;requesón;tal cual;BEDCA;;101.5;12.3;3.3;4.3;;BEDCA: Requesón
+A24;Lácteos;Queso fresco;queso fresco;tal cual;BEDCA;;196.7;12.4;2.5;15.4;;BEDCA: Queso fresco de burgos
+A25;Lácteos;Queso semicurado (loncha/bocadillo);queso semicurado;tal cual;BEDCA;;388.7;29.0;0.5;30.4;;BEDCA: Queso semicurado genérico
+A26;Lácteos;Queso feta;queso feta;tal cual;BEDCA;;;;;;;No feta en BEDCA. Usar etiqueta
+A27;Lácteos;Mozzarella light;mozzarella;tal cual;etiqueta;;221.6;19.5;0.0;16.1;;BEDCA: Mozzarella (no light)
+A28;Lácteos;Kéfir;kéfir;tal cual;BEDCA o etiqueta;;63.9;3.3;4.8;3.5;;BEDCA: Kefir
+A29;Lácteos;Leche desnatada;leche desnatada;tal cual;BEDCA;;33.9;3.3;4.6;0.2;;Menús en ml: indicar densidad (≈1,03 g/ml) si el dato es por 100 g | BEDCA: Leche desnatada pasteurizada. Densidad ≈1.03 g/ml
+A30;Lácteos;Leche semidesnatada;leche semidesnatada;tal cual;BEDCA;;45.8;3.2;4.6;1.6;;BEDCA: Leche semidesnatada pasteurizada
+A31;Lácteos;Leche entera;leche entera;tal cual;BEDCA;;65.1;3.1;4.7;3.8;;"Porridge: ""leche o bebida vegetal"" | BEDCA: Leche de vaca entera"
+A32;Cereales y tubérculos;Pan integral;pan integral;tal cual;BEDCA;;249.6;10.9;44.0;3.0;40.0;Menús en tostadas (40 g) | BEDCA: Pan integral. Tostadas 40 g
+A33;Cereales y tubérculos;Avena (copos);avena copos;crudo;BEDCA;;399.1;16.9;66.3;6.9;;BEDCA: Avena cruda
+A34;Cereales y tubérculos;Cereal integral de desayuno;cereales desayuno integrales;tal cual;etiqueta;;;;;;;etiqueta: cereales integrales de desayuno
+A35;Cereales y tubérculos;Arroz integral;arroz integral;crudo;BEDCA;;384.1;7.5;81.3;2.6;;"Menús: ""80 g arroz integral"". Confirmar si es peso en crudo o cocido | BEDCA: Arroz integral crudo. Confirmar si 80 g menú es crudo (sí recomendado)"
+A36;Cereales y tubérculos;Arroz blanco;arroz;crudo;BEDCA;;385.8;7.0;86.0;0.9;;BEDCA: Arroz (blanco crudo)
+A37;Cereales y tubérculos;Pasta integral;pasta integral;crudo;BEDCA;;345.5;13.4;66.2;2.5;;"Menú flexible: ""80 g pasta integral"". Confirmar crudo/cocido | BEDCA: Pasta integral cruda. Confirmar crudo/cocido"
+A38;Cereales y tubérculos;Quinoa;quinoa;crudo;BEDCA;;305.1;13.8;49.2;5.6;;"Menús: ""60 g quinoa"". Confirmar crudo/cocido | BEDCA: Quinoa cruda. Confirmar 60 g"
+A39;Cereales y tubérculos;Tortilla de trigo integral (wrap);tortilla de trigo / wrap integral;tal cual;etiqueta;;;;;;50.0;Menús: 1 tortilla = 50 g | etiqueta: 1 tortilla=50 g
+A40;Cereales y tubérculos;Galletas integrales;galletas integrales;tal cual;BEDCA o etiqueta;;;;;;;BEDCA o etiqueta galletas integrales
+A41;Cereales y tubérculos;Patata;patata;crudo;BEDCA;;72.5;2.2;15.2;0.2;;"Menú: ""150 g patata asada"" (confirmar crudo/asada) | BEDCA: Patata cruda. Confirmar peso asada"
+A42;Cereales y tubérculos;Boniato;boniato / batata;crudo;BEDCA;;101.0;1.2;23.0;0.3;;BEDCA: Boniato crudo
+A43;Cereales y tubérculos;Harina de trigo integral;harina integral;tal cual;BEDCA;;320.4;11.5;62.6;2.2;;Solo para la masa de la pizza casera | BEDCA: Harina trigo integral
+A44;Legumbres;Lentejas cocidas;lenteja cocida;cocidas (en conserva);BEDCA;;73.7;6.3;11.4;0.2;;"Menús: ""150-200 g lentejas"" en cocido | BEDCA: Lenteja en conserva (mejor proxy cocida; la entrada ""hervida"" tiene solo 9% agua y parece error). ~74 kcal"
+A45;Legumbres;Garbanzos cocidos;garbanzo cocido;cocidos (en conserva);BEDCA;;31.8;7.2;14.1;2.9;;BEDCA: Garbanzo en conserva (hervido id 2192 tiene datos anómalos). Verificar
+A46;Legumbres;Hummus;hummus;tal cual;BEDCA o etiqueta;;;;;;30.0;Menú: 30 g | No hummus en BEDCA. Etiqueta. 30 g
+A47;Verduras y hortalizas;Espinacas;espinaca;crudo (congelada);BEDCA;;22.2;2.7;1.0;0.8;;BEDCA: Espinaca picada congelada cruda
+A48;Verduras y hortalizas;Calabacín;calabacín;crudo;BEDCA;;17.2;1.8;2.0;0.2;;"""Verduras variadas/salteadas/asadas"" = media de calabacín, pimiento, cebolla y tomate | BEDCA: Calabacín"
+A49;Verduras y hortalizas;Calabaza;calabaza;crudo;BEDCA;;32.1;1.2;5.6;0.5;;BEDCA: Calabaza cruda
+A50;Verduras y hortalizas;Tomate (incluye cherry);tomate;crudo;BEDCA;;18.8;0.9;3.5;0.1;;BEDCA: Tomate
+A51;Verduras y hortalizas;Pimiento (rojo/verde);pimiento;crudo;BEDCA;;28.9;1.3;4.5;0.6;;BEDCA: Pimiento rojo crudo
+A52;Verduras y hortalizas;Pepino;pepino;crudo;BEDCA;;11.9;0.7;2.0;0.1;;BEDCA: Pepino
+A53;Verduras y hortalizas;Lechuga / ensalada;lechuga;crudo;BEDCA;;15.6;1.1;1.4;0.6;;BEDCA: Lechuga
+A54;Verduras y hortalizas;Brócoli;brécol / brócoli;crudo;BEDCA;;25.5;3.0;2.4;0.4;;BEDCA: Brécol crudo
+A55;Verduras y hortalizas;Espárragos;espárrago;crudo;BEDCA;;25.2;2.9;2.0;0.6;;BEDCA: Espárrago verde
+A56;Verduras y hortalizas;Champiñones;champiñón;crudo;BEDCA;;26.2;1.8;4.0;0.3;;BEDCA: Champiñon
+A57;Verduras y hortalizas;Zanahoria;zanahoria;crudo;BEDCA;;34.3;0.8;7.0;0.3;;BEDCA: Zanahoria cruda
+A58;Verduras y hortalizas;Cebolla;cebolla;crudo;BEDCA;;26.1;1.1;5.3;;;BEDCA: Cebolla
+A59;Verduras y hortalizas;Judía verde;judía verde;crudo;BEDCA;;27.5;2.2;3.7;0.4;;BEDCA: Judía verde cruda
+A60;Verduras y hortalizas;Puerro;puerro;crudo;BEDCA;;24.2;1.6;3.7;0.3;;BEDCA: Puerro crudo y congelado
+A61;Frutas;Manzana;manzana;crudo, porción comestible;BEDCA;;50.0;0.3;12.0;;150.0;Menús en piezas: anotar g por pieza comestible | BEDCA: Manzana. ~150 g/pieza
+A62;Frutas;Pera;pera;crudo, porción comestible;BEDCA;;44.7;0.4;10.6;;150.0;Menús en piezas: anotar g por pieza comestible | BEDCA: Pera. ~150 g/pieza
+A63;Frutas;Plátano;plátano;crudo, porción comestible;BEDCA;;88.8;1.2;20.0;0.3;110.0;Menús en piezas: anotar g por pieza comestible | BEDCA: Plátano. ~110 g comestible/pieza
+A64;Frutas;Fresas;fresa;crudo, porción comestible;BEDCA;;35.7;0.7;7.0;0.5;;BEDCA: Fresa
+A65;Frutas;Frutos rojos (arándano, frambuesa);"arándano; frambuesa";crudo, porción comestible;BEDCA;;;;;;;No arándano/frambuesa en BEDCA. Etiqueta o media.
+A66;Frutas;Piña;piña;crudo, porción comestible;BEDCA;;48.8;0.5;11.5;;;BEDCA: Piña
+A67;Frutas;Naranja (fruta de temporada);naranja;crudo, porción comestible;BEDCA;;38.2;0.8;8.6;;130.0;BEDCA: Naranja. ~130 g/pieza
+A68;Frutas;Aguacate;aguacate;crudo, porción comestible;BEDCA;;136.2;1.5;0.4;12.0;;BEDCA: Aguacate
+A69;Frutos secos y semillas;Nueces;nuez;tal cual;BEDCA;;592.0;14.0;3.3;63.3;10.0;BEDCA: Nuez. ~10 g/unidad
+A70;Frutos secos y semillas;Almendras;almendra;tal cual;BEDCA;;586.2;19.1;6.2;45.2;;BEDCA: Almendra cruda
+A71;Frutos secos y semillas;Nueces de Brasil;nuez de Brasil;tal cual;BEDCA;;;;;;;No en BEDCA. Etiqueta o USDA ~659 kcal/100g
+A72;Frutos secos y semillas;Frutos secos variados;frutos secos (media nuez/almendra/avellana);tal cual;BEDCA;;;;;;;Media nuez+almendra aprox. Dejar vacío o calcular
+A73;Frutos secos y semillas;Semillas de chía;chía;tal cual;BEDCA;;;;;;;No chía en BEDCA. Etiqueta típica
+A74;Grasas y otros;Aceite de oliva virgen extra (AOVE);aceite de oliva virgen extra;tal cual;BEDCA;;884.3;;0.0;100.0;5.0;Menús: 5 g | BEDCA: AOVE. 5 g en menús
+A75;Grasas y otros;Caldo de verduras / pollo;caldo;tal cual;BEDCA o etiqueta;;;;;;;"Casero desgrasado; casi sin calorías | BEDCA caldo vegetal parece concentrado. Usar etiqueta caldo comercial ~10 kcal/100ml"
+A76;Grasas y otros;Mermelada light;mermelada baja en azúcar;tal cual;etiqueta;;;;;;10.0;10 g en el menú flexible | etiqueta mermelada light
+A77;Grasas y otros;Proteína whey en polvo;proteína whey;tal cual;etiqueta;;;;;;30.0;Producto comercial: usar la etiqueta del que uses. Menús: 30 g | etiqueta whey 30 g
+A78;Grasas y otros;Leche de coco light;leche de coco light;tal cual;etiqueta;;;;;;;Pollo al curry | etiqueta leche coco light
+A79;Grasas y otros;Salsa de soja;salsa de soja;tal cual;BEDCA o etiqueta;;63.5;8.7;6.7;0.1;;BEDCA: Salsa de soja
+A80;Grasas y otros;Tahini (pasta de sésamo);tahini;tal cual;BEDCA o etiqueta;;590.5;18.2;0.9;58.0;;Hummus | BEDCA: Pasta de sésamo/tahini
+A81;Platos compuestos (calcular desde la receta, no buscar en BEDCA);Paella de verduras y marisco;—;según receta;calcular_desde_receta;paella-verduras-marisco;;;;;;Ración en el menú: menú: ~300 g. Ingredientes y cantidades en WalkForLife-Recetas.html
+A82;Platos compuestos (calcular desde la receta, no buscar en BEDCA);Paella mixta;—;según receta;calcular_desde_receta;paella-mixta;;;;;;Ración en el menú: ~300 g. Ingredientes y cantidades en WalkForLife-Recetas.html
+A83;Platos compuestos (calcular desde la receta, no buscar en BEDCA);Pizza casera integral de verduras;—;según receta;calcular_desde_receta;pizza-casera;;;;;;Ración en el menú: ~200 g. Ingredientes y cantidades en WalkForLife-Recetas.html
+A84;Platos compuestos (calcular desde la receta, no buscar en BEDCA);Cocido ligero;—;según receta;calcular_desde_receta;cocido-ligero;;;;;;Ración en el menú: ~300 g. Ingredientes y cantidades en WalkForLife-Recetas.html
+A85;Platos compuestos (calcular desde la receta, no buscar en BEDCA);Arroz tres delicias casero;—;según receta;calcular_desde_receta;arroz-tres-delicias;;;;;;Ración en el menú: 200 g. Ingredientes y cantidades en WalkForLife-Recetas.html
+A86;Platos compuestos (calcular desde la receta, no buscar en BEDCA);Tortilla de patata;—;según receta;calcular_desde_receta;tortilla-patata;;;;;;Ración en el menú: ~150 g. Ingredientes y cantidades en WalkForLife-Recetas.html
+A87;Platos compuestos (calcular desde la receta, no buscar en BEDCA);Tortilla de calabacín;—;según receta;calcular_desde_receta;tortilla-calabacin;;;;;;Ración en el menú: 2 huevos + 100 g calabacín. Ingredientes y cantidades en WalkForLife-Recetas.html
+A88;Platos compuestos (calcular desde la receta, no buscar en BEDCA);Lentejas estofadas con verduras;—;según receta;calcular_desde_receta;lentejas-estofadas;;;;;;Ración en el menú: 200 g. Ingredientes y cantidades en WalkForLife-Recetas.html
+A89;Platos compuestos (calcular desde la receta, no buscar en BEDCA);Pollo al curry suave con verduras;—;según receta;calcular_desde_receta;pollo-curry;;;;;;Ración en el menú: 150 g. Ingredientes y cantidades en WalkForLife-Recetas.html
+A90;Platos compuestos (calcular desde la receta, no buscar en BEDCA);Sopa de verduras;—;según receta;calcular_desde_receta;sopa-verduras;;;;;;Ración en el menú: 250 ml. Ingredientes y cantidades en WalkForLife-Recetas.html
+A91;Platos compuestos (calcular desde la receta, no buscar en BEDCA);Crema de calabaza;—;según receta;calcular_desde_receta;crema-calabaza;;;;;;Ración en el menú: 250 ml. Ingredientes y cantidades en WalkForLife-Recetas.html
+A92;Platos compuestos (calcular desde la receta, no buscar en BEDCA);Crema de calabacín;—;según receta;calcular_desde_receta;crema-calabacin;;;;;;Ración en el menú: 250 ml. Ingredientes y cantidades en WalkForLife-Recetas.html
+A93;Platos compuestos (calcular desde la receta, no buscar en BEDCA);Crema de verduras;—;según receta;calcular_desde_receta;crema-verduras;;;;;;Ración en el menú: 250 ml. Ingredientes y cantidades en WalkForLife-Recetas.html
+A94;Platos compuestos (calcular desde la receta, no buscar en BEDCA);Fajitas de pollo con verduras;—;según receta;calcular_desde_receta;fajitas-pollo;;;;;;Ración en el menú: 120 g pollo + 100 g verduras + 1 tortilla. Ingredientes y cantidades en WalkForLife-Recetas.html
+A95;Platos compuestos (calcular desde la receta, no buscar en BEDCA);Wrap integral de pollo y verduras;—;según receta;calcular_desde_receta;wrap-pollo;;;;;;Ración en el menú: 1 tortilla + 100 g pollo + 80 g verduras. Ingredientes y cantidades en WalkForLife-Recetas.html
+A96;Platos compuestos (calcular desde la receta, no buscar en BEDCA);Hamburguesa de pavo casera;—;según receta;calcular_desde_receta;hamburguesa-pavo;;;;;;Ración en el menú: 150 g. Ingredientes y cantidades en WalkForLife-Recetas.html
+A97;Platos compuestos (calcular desde la receta, no buscar en BEDCA);Sushi casero (maki);—;según receta;calcular_desde_receta;sushi-casero;;;;;;Ración en el menú: 200 g. Ingredientes y cantidades en WalkForLife-Recetas.html
+A98;Platos compuestos (calcular desde la receta, no buscar en BEDCA);Ensalada de quinoa;—;según receta;calcular_desde_receta;ensalada-quinoa;;;;;;Ración en el menú: 150 g. Ingredientes y cantidades en WalkForLife-Recetas.html
+A99;Platos compuestos (calcular desde la receta, no buscar en BEDCA);Porridge de avena;—;según receta;calcular_desde_receta;porridge-avena;;;;;;Ración en el menú: 40 g avena + leche + fruta. Ingredientes y cantidades en WalkForLife-Recetas.html
+A100;Platos compuestos (calcular desde la receta, no buscar en BEDCA);Tostadas francesas integrales;—;según receta;calcular_desde_receta;tostadas-francesas;;;;;;Ración en el menú: 60 g pan. Ingredientes y cantidades en WalkForLife-Recetas.html
+A101;Platos compuestos (calcular desde la receta, no buscar en BEDCA);Batidos y smoothies;—;según receta;calcular_desde_receta;batidos;;;;;;Ración en el menú: 200 ml. Ingredientes y cantidades en WalkForLife-Recetas.html
+A102;Platos compuestos (calcular desde la receta, no buscar en BEDCA);Revuelto de champiñones;—;según receta;calcular_desde_receta;revuelto-champinones;;;;;;Ración en el menú: 150 g champiñones + 2 huevos. Ingredientes y cantidades en WalkForLife-Recetas.html
+A103;Platos compuestos (calcular desde la receta, no buscar en BEDCA);Arroz integral con gambas y verduras;—;según receta;calcular_desde_receta;arroz-gambas;;;;;;Ración en el menú: 80 g arroz + 100 g gambas + 100 g verduras. Ingredientes y cantidades en WalkForLife-Recetas.html
+A104;Platos compuestos (calcular desde la receta, no buscar en BEDCA);Garbanzos con espinacas;—;según receta;calcular_desde_receta;garbanzos-espinacas;;;;;;Ración en el menú: 150 g garbanzos + 100 g espinacas. Ingredientes y cantidades en WalkForLife-Recetas.html
+A105;Platos compuestos (calcular desde la receta, no buscar en BEDCA);Pescado al horno con verduras;—;según receta;calcular_desde_receta;pescado-horno;;;;;;Ración en el menú: 150-200 g pescado + verduras. Ingredientes y cantidades en WalkForLife-Recetas.html
+A106;Platos compuestos (calcular desde la receta, no buscar en BEDCA);Ternera al horno con patata asada;—;según receta;calcular_desde_receta;ternera-horno-patata;;;;;;Ración en el menú: 150 g + 150 g patata. Ingredientes y cantidades en WalkForLife-Recetas.html

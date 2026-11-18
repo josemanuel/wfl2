@@ -63,7 +63,7 @@ let exact=true; for(const dk in ms)ms[dk].dias.forEach((d,i)=>['desayuno','snack
 t('factor 1 reproduce exactamente los 105 textos originales',exact);
 let d0=A.MENU_ESC[2][0],E=M.escalarMenuDia(d0,1500);
 t('escalado: alcanza el objetivo cuando no se limita',!E.limitado&&Math.abs(E.kcal-1500)<=2,JSON.stringify([E.kcal,E.factor]));
-E=M.escalarMenuDia(A.MENU_ESC[3][0],1800); t('escalado: factor limitado a 1,5 y marcado',E.limitado&&E.factor===1.5&&E.kcal<1800);
+E=M.escalarMenuDia(A.MENU_ESC[3][0],3000); t('escalado: factor limitado a 1,5 y marcado (desvío >3 %)',E.limitado&&E.factor===1.5&&E.kcal<3000);
 E=M.escalarMenuDia(A.MENU_ESC[1][0],1000); t('escalado a la baja: reduce cantidades (factor <1)',E.factor<1&&E.kcal===1000||E.limitado);
 t('unidades fijas: "2 huevos" no cambia al escalar',M.escalarMenuDia(A.MENU_ESC[1][0],1900).textos.desayuno.includes('2 huevos'));
 t('aplicarFactorTpl redondea a 5 y mínimo 5',M.aplicarFactorTpl('{{150g}} y {{5g}}',1.22)==='185g y 5g',M.aplicarFactorTpl('{{150g}} y {{5g}}',1.22));
@@ -112,4 +112,12 @@ t('GLP-1: ya no se recomienda agua con gas',!G1.GLP1.hidratacion.includes('agua 
 t('GLP-1: visión borrosa como señal de alarma',G1.GLP1.alarma.some(a=>a.includes('Visión borrosa')&&a.includes('semaglutida'))&&Ls.includes('Vision borrosa')||Ls.includes('Visi'));
 const Lr=G1.glp1Lineas({pesoObjetivo:80,edad:40,glp1Intenso:true,cribado:['renal']}).map(x=>x[1]).join(' | ');
 t('GLP-1 + enfermedad renal: el PDF no da cifras de proteína',Lr.includes('nefrologo')&&!/\d+-\d+ g\/dia/.test(Lr)&&!Lr.includes('Reparto'));
+
+// --- Rediseño de menús (v2.3): todos los días parten de ~1.500-1.600 kcal ---
+{const kb=[];for(const dk of Object.keys(A.MENU_ESC))for(const d of A.MENU_ESC[dk])kb.push(M.escalarMenuDia(d,2000).kcalBase);
+ t('menús: los 21 días parten de 1.450-1.650 kcal (antes 740-1.430)',kb.length===21&&Math.min(...kb)>=1450&&Math.max(...kb)<=1650,Math.min(...kb)+'-'+Math.max(...kb));
+ t('menús: con un objetivo típico (1.700 kcal) ningún día se queda limitado por el tope ×1,5',Object.keys(A.MENU_ESC).every(dk=>A.MENU_ESC[dk].every(d=>!M.escalarMenuDia(d,1700).limitado)));
+ t('menús: objetivo de 1.200 kcal alcanzable reduciendo raciones (desvío ≤ 3 %, sin ⚠)',Object.keys(A.MENU_ESC).every(dk=>A.MENU_ESC[dk].every(d=>{const e=M.escalarMenuDia(d,1200);return !e.limitado&&Math.abs(e.kcal-1200)<=36;})));
+ {let lim=0,okd=true;Object.keys(A.MENU_ESC).forEach(dk=>A.MENU_ESC[dk].forEach(d=>{const e=M.escalarMenuDia(d,1000);if(e.limitado){lim++;if(e.factor!==0.5)okd=false;}else if(Math.abs(e.kcal-1000)>30)okd=false;}));
+ t('menús: con 1.000 kcal cada día o alcanza el objetivo (±3 %) o se señala limitado en el tope ×0,5',okd&&lim>0,'limitados: '+lim);}}
 console.log(fallos?fallos+' FALLOS':'Todo correcto'); process.exit(fallos?1:0);

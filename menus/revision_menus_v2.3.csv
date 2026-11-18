@@ -1,0 +1,106 @@
+﻿dieta;dia;comida;texto_anterior;texto_nuevo;kcal_anterior;kcal_nuevo;tipo_de_cambio
+Mediterránea;Lunes;Desayuno;2 huevos (100g) revueltos + espinacas (50g) + 1 tostada integral (40g) con AOVE (5g);2 huevos (100g) revueltos + espinacas (55g) + 1 tostada integral (40g) con AOVE (5g);304;305;raciones ×1,25 (≤)
+Mediterránea;Lunes;Snack AM;1 yogur griego 0% (125g) + 15g nueces;1 yogur griego 0% (125g) + 15g nueces;160;160;sin cambios
+Mediterránea;Lunes;Comida;150g pollo a la plancha + ensalada (150g) + 80g arroz integral + 1 fruta (150g);170g pollo a la plancha + ensalada (170g) + 90g arroz integral + 1 fruta (150g);570;633;raciones ×1,25 (≤)
+Mediterránea;Lunes;Snack PM;1 manzana (150g) + 20g almendras;1 manzana (150g) + 20g almendras;192;192;sin cambios
+Mediterránea;Lunes;Cena;200g merluza al horno + 300g verduras asadas + caldo (200ml);225g merluza al horno + 335g verduras asadas + caldo (225ml);207;233;raciones ×1,25 (≤)
+Mediterránea;Martes;Desayuno;1 tostada integral (40g) con tomate (80g), AOVE (5g) y 30g jamón + café;2 tostadas integrales (80g) con tomate (80g), AOVE (10g) y 30g jamón + café;193;337;reescrito a mano
+Mediterránea;Martes;Snack AM;1 kéfir (200ml) + 10g semillas de chía;1 kéfir (200ml) + 10g semillas de chía + 1 plátano (100g);176;265;reescrito a mano
+Mediterránea;Martes;Comida;200g lentejas estofadas con verduras + ensalada (100g) + 30g pan integral;300g lentejas estofadas con verduras + ensalada (100g) + 40g pan integral;232;328;reescrito a mano
+Mediterránea;Martes;Snack PM;30g nueces;30g nueces + 1 manzana (150g);178;253;reescrito a mano
+Mediterránea;Martes;Cena;Tortilla de calabacín (2 huevos + 100g calabacín) + ensalada (100g);Tortilla de calabacín (2 huevos + 100g calabacín) + ensalada (100g) + 40g pan integral;226;326;reescrito a mano
+Mediterránea;Miércoles;Desayuno;Yogur natural (150g) con 30g avena y 50g frutos rojos;Yogur natural (150g) con 40g avena, 50g frutos rojos y 20g nueces;237;395;reescrito a mano
+Mediterránea;Miércoles;Snack AM;1 fruta de temporada (150g);1 fruta de temporada (150g) + 20g frutos secos;83;201;reescrito a mano
+Mediterránea;Miércoles;Comida;150g garbanzos cocidos con espinacas (100g) + 30g pan integral + fruta (150g);200g garbanzos cocidos con espinacas (100g) + 40g pan integral + fruta (150g) + AOVE (10g);245;380;reescrito a mano
+Mediterránea;Miércoles;Snack PM;5 nueces de Brasil + 1 pera (150g);5 nueces de Brasil + 1 pera (150g);232;232;sin cambios
+Mediterránea;Miércoles;Cena;150g dorada al horno + 150g pimientos asados;150g dorada al horno + 150g pimientos asados + 150g patata cocida;183;292;reescrito a mano
+Mediterránea;Jueves;Desayuno;1 tostada integral (40g) con ½ aguacate (60g) y 1 huevo poché;2 tostadas integrales (80g) con ½ aguacate (60g) y 1 huevo poché;256;356;reescrito a mano
+Mediterránea;Jueves;Snack AM;150g tomate cherry + 30g queso fresco;150g tomate cherry + 30g queso fresco + 1 fruta (150g);87;170;reescrito a mano
+Mediterránea;Jueves;Comida;80g arroz integral con verduras (100g) y 100g gambas + ensalada (100g);100g arroz integral con verduras (100g) y 100g gambas + ensalada (100g);435;512;reescrito a mano
+Mediterránea;Jueves;Snack PM;Zanahoria (100g) con 30g hummus;Zanahoria (100g) con 30g hummus + 1 pera (150g);103;170;reescrito a mano
+Mediterránea;Jueves;Cena;Crema de calabaza (250ml) + tortilla francesa (2 huevos);Crema de calabaza (250ml) + tortilla francesa (2 huevos) + 40g pan integral;239;338;reescrito a mano
+Mediterránea;Viernes;Desayuno;40g avena en porridge con 1 manzana (150g) y canela;50g avena en porridge con 1 manzana (150g) y canela + 15g nueces;235;363;reescrito a mano
+Mediterránea;Viernes;Snack AM;1 yogur natural (125g) con canela;1 yogur natural (125g) con canela + 1 plátano (100g);79;168;reescrito a mano
+Mediterránea;Viernes;Comida;150g pollo al curry suave con verduras (150g) + 60g quinoa;150g pollo al curry suave con verduras (150g) + 80g quinoa;453;514;reescrito a mano
+Mediterránea;Viernes;Snack PM;1 fruta (150g) + 15g almendras;1 fruta (150g) + 15g almendras;171;171;sin cambios
+Mediterránea;Viernes;Cena;120g sardinas a la plancha + ensalada de tomate (150g);150g sardinas a la plancha + ensalada de tomate (150g) + 40g pan integral;196;338;reescrito a mano
+Mediterránea;Sábado;Desayuno;1 tostada integral (40g) con 40g queso fresco y tomate (80g);2 tostadas integrales (80g) con 40g queso fresco y tomate (80g);194;293;reescrito a mano
+Mediterránea;Sábado;Snack AM;1 fruta de temporada (150g);1 fruta de temporada (150g) + 1 yogur natural (125g);83;162;reescrito a mano
+Mediterránea;Sábado;Comida;Paella de verduras y marisco (ración moderada, ~300g);Paella de verduras y marisco (ración moderada, ~300g) + ensalada (100g) + 1 fruta (150g);370;469;reescrito a mano
+Mediterránea;Sábado;Snack PM;Infusión + 20g frutos secos;Infusión + 30g frutos secos + 1 pera (150g);118;244;reescrito a mano
+Mediterránea;Sábado;Cena;Revuelto de champiñones (150g) con 2 huevos + ensalada (100g);Revuelto de champiñones (150g) con 2 huevos + ensalada (100g) + 40g pan integral;248;348;reescrito a mano
+Mediterránea;Domingo;Desayuno;Tortilla francesa (2 huevos) con espárragos (80g);Tortilla francesa (2 huevos) con espárragos (80g) + 2 tostadas integrales (80g) con AOVE (10g);169;457;reescrito a mano
+Mediterránea;Domingo;Snack AM;150g piña natural;150g piña natural + 1 yogur natural (125g);73;152;reescrito a mano
+Mediterránea;Domingo;Comida;150g ternera magra al horno + 150g patata asada + ensalada (100g);180g ternera magra al horno + 200g patata asada + ensalada (150g);288;364;reescrito a mano
+Mediterránea;Domingo;Snack PM;1 yogur griego 0% (125g);1 yogur griego 0% (125g) + 30g nueces;71;249;reescrito a mano
+Mediterránea;Domingo;Cena;Sopa de verduras (250ml) + 150g pescado blanco a la plancha;Sopa de verduras (300ml) + 200g pescado blanco a la plancha + 40g pan integral con AOVE (5g);136;320;reescrito a mano
+Alta proteína;Lunes;Desayuno;200g queso cottage + 150g fresas + 10g semillas de chía;235g queso cottage + 175g fresas + 10g semillas de chía;292;334;raciones ×1,25 (≤)
+Alta proteína;Lunes;Snack AM;2 lonchas de pavo (40g) + 1 huevo duro;2 lonchas de pavo (40g) + 1 huevo duro;133;133;sin cambios
+Alta proteína;Lunes;Comida;180g pechuga de pollo + 200g brócoli + 60g quinoa + 50g aguacate;210g pechuga de pollo + 235g brócoli + 70g quinoa + 60g aguacate;490;575;raciones ×1,25 (≤)
+Alta proteína;Lunes;Snack PM;Batido: 200ml leche desnatada + 30g whey + ½ plátano (60g);Batido: 235ml leche desnatada + 35g whey + ½ plátano (60g);237;268;raciones ×1,25 (≤)
+Alta proteína;Lunes;Cena;200g ternera magra o 4 claras + 150g espárragos + ensalada (150g);235g ternera magra o 4 claras + 175g espárragos + ensalada (175g);200;229;raciones ×1,25 (≤)
+Alta proteína;Martes;Desayuno;Tortilla de 3 claras + 30g jamón york;Tortilla de 3 claras + 40g jamón york;78;90;raciones ×1,25 (≤)
+Alta proteína;Martes;Snack AM;150g requesón + 10 almendras;190g requesón + 10 almendras;223;263;raciones ×1,25 (≤)
+Alta proteína;Martes;Comida;180g salmón a la plancha + 150g garbanzos + ensalada (100g);225g salmón a la plancha + 190g garbanzos + ensalada (125g);581;730;raciones ×1,25 (≤)
+Alta proteína;Martes;Snack PM;1 yogur proteico (200g);1 yogur proteico (200g);124;124;sin cambios
+Alta proteína;Martes;Cena;150g pavo a la plancha + 150g verduras salteadas;190g pavo a la plancha + 190g verduras salteadas;270;342;raciones ×1,25 (≤)
+Alta proteína;Miércoles;Desayuno;200g skyr/yogur proteico + 20g nueces;250g skyr/yogur proteico + 30g nueces;242;333;reescrito a mano
+Alta proteína;Miércoles;Snack AM;30g jamón serrano + 1 fruta pequeña (100g);30g jamón serrano + 1 fruta pequeña (100g);151;151;sin cambios
+Alta proteína;Miércoles;Comida;180g ternera magra + 80g arroz integral + ensalada (100g);200g ternera magra + 100g arroz integral + ensalada (150g) + AOVE (10g);519;714;reescrito a mano
+Alta proteína;Miércoles;Snack PM;Batido proteico (30g) con agua;Batido proteico (30g) con agua;116;116;sin cambios
+Alta proteína;Miércoles;Cena;4 claras de huevo + 100g espinacas salteadas;4 claras de huevo + 100g espinacas salteadas + 40g pan integral con AOVE (5g);81;225;reescrito a mano
+Alta proteína;Jueves;Desayuno;Batido: 250ml leche + 30g avena + 1 plátano (100g);Batido: 250ml leche + 40g avena + 1 plátano (100g);323;363;reescrito a mano
+Alta proteína;Jueves;Snack AM;150g cottage + canela;200g cottage + canela + 1 fruta (150g);142;273;reescrito a mano
+Alta proteína;Jueves;Comida;180g merluza + 150g lentejas + ensalada (100g);180g merluza + 200g lentejas + ensalada (100g) + 40g pan integral;242;379;reescrito a mano
+Alta proteína;Jueves;Snack PM;30g almendras;30g almendras;176;176;sin cambios
+Alta proteína;Jueves;Cena;180g pechuga de pollo + 150g champiñones salteados;180g pechuga de pollo + 150g champiñones salteados + 150g patata cocida;227;336;reescrito a mano
+Alta proteína;Viernes;Desayuno;3 huevos revueltos + 30g jamón york;3 huevos revueltos + 35g jamón york;257;263;raciones ×1,25 (≤)
+Alta proteína;Viernes;Snack AM;1 yogur griego (150g) + 10g semillas;1 yogur griego (150g) + 10g semillas;134;134;sin cambios
+Alta proteína;Viernes;Comida;180g solomillo de cerdo + 60g quinoa + 200g brócoli;220g solomillo de cerdo + 75g quinoa + 240g brócoli;469;577;raciones ×1,25 (≤)
+Alta proteína;Viernes;Snack PM;200g requesón + 100g fresas;240g requesón + 120g fresas;239;286;raciones ×1,25 (≤)
+Alta proteína;Viernes;Cena;180g atún a la plancha + ensalada de pepino (150g);220g atún a la plancha + ensalada de pepino (180g);237;289;raciones ×1,25 (≤)
+Alta proteína;Sábado;Desayuno;150g requesón + 100g frutos rojos;190g requesón + 125g frutos rojos;197;249;raciones ×1,25 (≤)
+Alta proteína;Sábado;Snack AM;2 huevos duros;2 huevos duros;149;149;sin cambios
+Alta proteína;Sábado;Comida;150g gambas a la plancha + 80g arroz integral + ensalada (100g);190g gambas a la plancha + 100g arroz integral + ensalada (125g);456;573;raciones ×1,25 (≤)
+Alta proteína;Sábado;Snack PM;Batido proteico (30g) con agua;Batido proteico (40g) con agua;116;154;raciones ×1,25 (≤)
+Alta proteína;Sábado;Cena;Hamburguesa de pavo casera (150g) + 150g verduras al vapor;Hamburguesa de pavo casera (190g) + 190g verduras al vapor;314;398;raciones ×1,25 (≤)
+Alta proteína;Domingo;Desayuno;Tortilla de 3 claras + 1 huevo con 100g espinacas;Tortilla de 3 claras + 1 huevo con 100g espinacas + 2 tostadas integrales (80g);141;341;reescrito a mano
+Alta proteína;Domingo;Snack AM;30g jamón serrano;30g jamón serrano + 1 fruta pequeña (100g);95;151;reescrito a mano
+Alta proteína;Domingo;Comida;180g pollo al horno + 150g boniato + ensalada (100g);200g pollo al horno + 200g boniato + ensalada (100g) + AOVE (10g);355;515;reescrito a mano
+Alta proteína;Domingo;Snack PM;150g yogur griego 0%;150g yogur griego 0% + 20g almendras;86;203;reescrito a mano
+Alta proteína;Domingo;Cena;180g salmón al vapor + 150g espárragos;180g salmón al vapor + 150g espárragos;363;363;sin cambios
+Flexible;Lunes;Desayuno;40g cereal integral + 200ml leche semidesnatada + 1 fruta (100g);50g cereal integral + 250ml leche semidesnatada + 1 plátano (100g);291;383;reescrito a mano
+Flexible;Lunes;Snack AM;1 fruta (150g) o 1 yogur (125g);1 fruta (150g) + 1 yogur (125g);81;162;reescrito a mano
+Flexible;Lunes;Comida;150g proteína a elegir + ración vegetal (150g) + 70g carbohidrato cocido;150g proteína a elegir + ración vegetal (150g) + 150g carbohidrato cocido + AOVE (10g);204;327;reescrito a mano
+Flexible;Lunes;Snack PM;1 fruta (150g) o 2 galletas integrales (20g);1 fruta (150g) + 2 galletas integrales (20g) + 20g frutos secos;86;289;reescrito a mano
+Flexible;Lunes;Cena;Tortilla de 2 huevos + ensalada (100g) + caldo (200ml);Tortilla de 2 huevos + ensalada (100g) + 40g pan integral + caldo (200ml) + 1 yogur natural (125g);174;353;reescrito a mano
+Flexible;Martes;Desayuno;2 tostadas integrales (60g) con mermelada light (10g) y 30g queso fresco;3 tostadas integrales (90g) con mermelada light (10g) y 30g queso fresco;222;297;reescrito a mano
+Flexible;Martes;Snack AM;1 yogur (125g);1 yogur (125g) + 20g frutos secos;79;197;reescrito a mano
+Flexible;Martes;Comida;80g pasta integral con verduras (100g) y 80g atún;100g pasta integral con verduras (100g) y 100g atún + 1 fruta (150g);394;570;reescrito a mano
+Flexible;Martes;Snack PM;1 fruta (150g);1 fruta (150g) + 2 galletas integrales (20g);83;171;reescrito a mano
+Flexible;Martes;Cena;Pizza casera integral de verduras (ración moderada, ~200g);Pizza casera integral de verduras (ración moderada, ~200g) + ensalada (150g) + 1 yogur natural (125g);245;347;reescrito a mano
+Flexible;Miércoles;Desayuno;40g cereales integrales con 200ml leche;50g cereales integrales con 250ml leche + 1 plátano (100g);236;383;reescrito a mano
+Flexible;Miércoles;Snack AM;20g frutos secos;20g frutos secos + 1 fruta (150g);118;201;reescrito a mano
+Flexible;Miércoles;Comida;150g lentejas con un toque de chorizo (20g) + ensalada (100g);200g lentejas con un toque de chorizo (20g) + ensalada (100g) + 40g pan integral + 1 fruta (150g);190;410;reescrito a mano
+Flexible;Miércoles;Snack PM;1 vaso de kéfir (200ml);1 vaso de kéfir (200ml) + 2 galletas integrales (20g);128;216;reescrito a mano
+Flexible;Miércoles;Cena;Wrap integral (1 tortilla 50g) de pollo (100g) y verduras (80g);Wrap integral (1 tortilla 50g) de pollo (100g) y verduras (80g) + 1 fruta (150g);273;356;reescrito a mano
+Flexible;Jueves;Desayuno;1 tostada integral (40g) con ½ aguacate (60g);2 tostadas integrales (80g) con ½ aguacate (60g) y 1 huevo poché;182;356;reescrito a mano
+Flexible;Jueves;Snack AM;1 fruta (150g);1 fruta (150g) + 20g frutos secos;83;201;reescrito a mano
+Flexible;Jueves;Comida;Arroz tres delicias casero (200g) + ensalada (100g);Arroz tres delicias casero (250g) + ensalada (100g) + 1 yogur natural (125g);282;428;reescrito a mano
+Flexible;Jueves;Snack PM;2 galletas integrales (20g);2 galletas integrales (20g) + 1 yogur (125g);88;167;reescrito a mano
+Flexible;Jueves;Cena;Tortilla de patata (ración ~150g) + ensalada (100g);Tortilla de patata (ración ~150g) + ensalada (150g) + 1 fruta (150g) + 40g pan integral;216;407;reescrito a mano
+Flexible;Viernes;Desayuno;Batido de frutas (200ml) con 125g yogur;1 tostada integral (40g) con 30g queso fresco + Batido de frutas (200ml) con 125g yogur;190;349;reescrito a mano
+Flexible;Viernes;Snack AM;1 yogur (125g);1 yogur (125g) + 20g frutos secos;79;197;reescrito a mano
+Flexible;Viernes;Comida;Fajitas de pollo (120g) con verduras (100g) y 1 tortilla (50g);Fajitas de pollo (150g) con verduras (150g) y 1 tortilla (50g) + 1 fruta (150g);342;479;reescrito a mano
+Flexible;Viernes;Snack PM;1 fruta (150g);1 fruta (150g) + 2 galletas integrales (20g);83;171;reescrito a mano
+Flexible;Viernes;Cena;Crema de verduras (250ml) + tortilla francesa (2 huevos);Crema de verduras (300ml) + tortilla francesa (2 huevos) + 40g pan integral + 1 yogur natural (125g);214;406;reescrito a mano
+Flexible;Sábado;Desayuno;Bocadillo integral pequeño (60g pan) con 40g jamón y 30g queso;Bocadillo integral pequeño (60g pan) con 40g jamón y 30g queso + 1 fruta (150g);312;395;reescrito a mano
+Flexible;Sábado;Snack AM;20g frutos secos;20g frutos secos + 1 fruta (150g);118;201;reescrito a mano
+Flexible;Sábado;Comida;Paella mixta (ración moderada, ~300g);Paella mixta (ración moderada, ~300g) + ensalada (100g);402;417;reescrito a mano
+Flexible;Sábado;Snack PM;1 fruta (150g);1 yogur (125g) + 20g frutos secos;83;197;reescrito a mano
+Flexible;Sábado;Cena;Ensalada de quinoa (150g) o sushi casero (200g);Ensalada de quinoa (200g) o sushi casero (250g);229;294;reescrito a mano
+Flexible;Domingo;Desayuno;Tostadas francesas integrales (60g) con fruta (100g);Tostadas francesas integrales (60g) con fruta (100g);347;347;sin cambios
+Flexible;Domingo;Snack AM;1 yogur (125g);1 yogur (125g) + 30g frutos secos;79;256;reescrito a mano
+Flexible;Domingo;Comida;Cocido reducido en grasa (ración ~300g) + ensalada (100g);Cocido reducido en grasa (ración ~300g) + ensalada (100g) + 40g pan integral + 1 fruta (150g);145;328;reescrito a mano
+Flexible;Domingo;Snack PM;1 fruta (150g);1 fruta (150g) + 30g frutos secos;83;260;reescrito a mano
+Flexible;Domingo;Cena;Crema de calabacín (250ml) + 1 huevo;Crema de calabacín (300ml) + tortilla francesa (2 huevos) + 40g pan integral;142;330;reescrito a mano

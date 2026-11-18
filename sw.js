@@ -1,6 +1,6 @@
 // WalkForLife - Service Worker v4: network-first (siempre la versión nueva si hay red), caché como respaldo offline.
 // Precarga la app, el motor, las librerías vendorizadas, el CSS compilado y las fuentes: la PWA funciona sin conexión.
-const CACHE='walkforlife-cache-v6';
+const CACHE='walkforlife-cache-v7';
 const BASE=['./','WalkForLife.html','WalkForLife-Manual.html','WalkForLife-Recetas.html','manifest.json','icon-192.png','icon-512.png','LogoWalkforlife.png',
  'css/app.css','js/motor.js','js/alimentos.js','js/glp1.js','vendor/chart.umd.min.js','vendor/jspdf.umd.min.js',
  'fonts/dm-sans-latin-300-normal.woff2','fonts/dm-sans-latin-400-normal.woff2','fonts/dm-sans-latin-500-normal.woff2','fonts/dm-sans-latin-600-normal.woff2','fonts/dm-sans-latin-700-normal.woff2',
