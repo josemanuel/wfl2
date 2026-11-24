@@ -1062,7 +1062,7 @@ function bloqueDietaGLP1(d) {
   const det = (t, b) => `<details class="border border-blue-200 rounded-xl p-3 bg-white"><summary class="font-semibold text-blue-800 cursor-pointer text-sm">${t}</summary><div class="text-sm text-gray-600 mt-2">${b}</div></details>`;
   return `<div class="bg-blue-50 border-2 border-blue-200 rounded-xl p-4 mb-5">
     <h4 class="font-semibold text-blue-800 mb-1">💉 Dieta adaptada a GLP-1</h4>
-    <p class="text-sm text-blue-700 mb-3">⭐ Se recomienda la <strong>opción 1 (Mediterránea)</strong>, el patrón con mejor evidencia en estos tratamientos.${renal ? '' : ' La opción 2 (alta en proteínas) también encaja con el objetivo de proteína.'} Haz 4–5 comidas pequeñas, mastica despacio, para al primer signo de saciedad y no intentes terminar el plato por obligación. Los batidos del menú son calorías líquidas: prefiere alternativas sólidas (por ejemplo, yogur con fruta).</p>
+    <p class="text-sm text-blue-700 mb-3">⭐ Se recomienda la <strong>opción 1 (Mediterránea)</strong>, el patrón con mejor evidencia en estos tratamientos.${renal ? '' : ' La opción 2 (alta en proteínas) también encaja con el objetivo de proteína.'} Con los menús tipo, <strong>refuerza el desayuno y la cena con una fuente de proteína</strong>: el planificador te marca en rojo las comidas principales que no llegan a su mínimo y te sugiere cuánto añadir. Haz 4–5 comidas pequeñas, mastica despacio, para al primer signo de saciedad y no intentes terminar el plato por obligación. Los batidos del menú son calorías líquidas: prefiere alternativas sólidas (por ejemplo, yogur con fruta).</p>
     <div class="space-y-2">
       ${det('Cómo comer, grasas, fibra e hidratación', `<ul class="list-disc pl-5 space-y-0.5">${li(GLP1.comer)}</ul><p class="mt-2"><strong>Grasas:</strong> limitar ${GLP1.grasas.limitar}; preferir ${GLP1.grasas.preferir}.</p><p class="mt-1"><strong>Fibra:</strong> ${GLP1.fibra}</p><p class="mt-1"><strong>Hidratación:</strong> ${GLP1.hidratacion}</p><p class="mt-1"><strong>Calorías líquidas:</strong> ${GLP1.liquidas}</p>`)}
       ${det('Efectos secundarios: qué hacer', GLP1.efectos.map(e => `<p class="font-semibold mt-1">${e.t}</p><ul class="list-disc pl-5 space-y-0.5">${li(e.l)}</ul>`).join(''))}
@@ -1428,21 +1428,21 @@ function renderDieta() {
 const MENU_SEMANAL = {
   1: { // Mediterránea
     dias: [
-      {dia:'Lunes',     desayuno:'2 huevos (100g) revueltos + espinacas (55g) + 1 tostada integral (40g) con AOVE (5g)', snackAM:'1 yogur griego 0% (125g) + 15g nueces', comida:'170g pollo a la plancha + ensalada (170g) + 90g arroz integral + 1 fruta (150g)', snackPM:'1 manzana (150g) + 20g almendras', cena:'225g merluza al horno + 335g verduras asadas + caldo (225ml)'},
-      {dia:'Martes',    desayuno:'2 tostadas integrales (80g) con tomate (80g), AOVE (10g) y 30g jamón + café', snackAM:'1 kéfir (200ml) + 10g semillas de chía + 1 plátano (100g)', comida:'300g lentejas estofadas con verduras + ensalada (100g) + 40g pan integral', snackPM:'30g nueces + 1 manzana (150g)', cena:'Tortilla de calabacín (2 huevos + 100g calabacín) + ensalada (100g) + 40g pan integral'},
-      {dia:'Miércoles', desayuno:'Yogur natural (150g) con 40g avena, 50g frutos rojos y 20g nueces', snackAM:'1 fruta de temporada (150g) + 20g frutos secos', comida:'200g garbanzos cocidos con espinacas (100g) + 40g pan integral + fruta (150g) + AOVE (10g)', snackPM:'5 nueces de Brasil + 1 pera (150g)', cena:'150g dorada al horno + 150g pimientos asados + 150g patata cocida'},
-      {dia:'Jueves',    desayuno:'2 tostadas integrales (80g) con ½ aguacate (60g) y 1 huevo poché', snackAM:'150g tomate cherry + 30g queso fresco + 1 fruta (150g)', comida:'100g arroz integral con verduras (100g) y 100g gambas + ensalada (100g)', snackPM:'Zanahoria (100g) con 30g hummus + 1 pera (150g)', cena:'Crema de calabaza (250ml) + tortilla francesa (2 huevos) + 40g pan integral'},
-      {dia:'Viernes',   desayuno:'50g avena en porridge con 1 manzana (150g) y canela + 15g nueces', snackAM:'1 yogur natural (125g) con canela + 1 plátano (100g)', comida:'150g pollo al curry suave con verduras (150g) + 80g quinoa', snackPM:'1 fruta (150g) + 15g almendras', cena:'150g sardinas a la plancha + ensalada de tomate (150g) + 40g pan integral'},
-      {dia:'Sábado',    desayuno:'2 tostadas integrales (80g) con 40g queso fresco y tomate (80g)', snackAM:'1 fruta de temporada (150g) + 1 yogur natural (125g)', comida:'Paella de verduras y marisco (ración moderada, ~300g) + ensalada (100g) + 1 fruta (150g)', snackPM:'Infusión + 30g frutos secos + 1 pera (150g)', cena:'Revuelto de champiñones (150g) con 2 huevos + ensalada (100g) + 40g pan integral'},
+      {dia:'Lunes',     desayuno:'3 huevos (150g) revueltos + espinacas (55g) + 1 tostada integral (40g) con AOVE (5g)', snackAM:'1 yogur griego 0% (125g) + 15g nueces', comida:'170g pollo a la plancha + ensalada (170g) + 90g arroz integral + 1 fruta (150g)', snackPM:'1 manzana (150g) + 20g almendras', cena:'225g merluza al horno + 335g verduras asadas + caldo (225ml)'},
+      {dia:'Martes',    desayuno:'2 tostadas integrales (80g) con tomate (80g), 60g jamón y 1 huevo duro + café', snackAM:'1 kéfir (200ml) + 10g semillas de chía + 1 plátano (100g)', comida:'300g lentejas estofadas con verduras + 100g pollo a la plancha + ensalada (100g)', snackPM:'30g nueces + 1 manzana (150g)', cena:'Tortilla de calabacín (2 huevos + 100g calabacín) + ensalada (100g) + 1 yogur griego 0% (125g)'},
+      {dia:'Miércoles', desayuno:'Yogur griego 0% (200g) con 40g avena, 50g frutos rojos y 20g nueces', snackAM:'1 fruta de temporada (150g) + 20g frutos secos', comida:'150g garbanzos cocidos con espinacas (100g) + 100g pollo a la plancha + 40g pan integral + fruta (150g) + AOVE (10g)', snackPM:'5 nueces de Brasil + 1 pera (150g)', cena:'150g dorada al horno + 150g pimientos asados + 150g patata cocida'},
+      {dia:'Jueves',    desayuno:'1 tostada integral (40g) con ½ aguacate (60g) y 3 huevos poché', snackAM:'150g tomate cherry + 30g queso fresco + 1 fruta (150g)', comida:'100g arroz integral con verduras (100g) y 100g gambas + ensalada (100g)', snackPM:'Zanahoria (100g) con 30g hummus + 1 pera (150g)', cena:'Crema de calabaza (250ml) + tortilla francesa (2 huevos) + 60g jamón'},
+      {dia:'Viernes',   desayuno:'40g avena en porridge con 200ml leche semidesnatada y canela + 1 yogur griego 0% (125g) + 1 manzana (150g)', snackAM:'1 yogur natural (125g) con canela + 1 plátano (100g)', comida:'150g pollo al curry suave con verduras (150g) + 80g quinoa', snackPM:'1 fruta (150g) + 15g almendras', cena:'150g sardinas a la plancha + ensalada de tomate (150g) + 40g pan integral'},
+      {dia:'Sábado',    desayuno:'2 tostadas integrales (80g) con 40g queso fresco, 60g jamón y tomate (80g)', snackAM:'1 fruta de temporada (150g) + 1 yogur natural (125g)', comida:'Paella de verduras y marisco (ración moderada, ~300g) + 100g gambas a la plancha + ensalada (100g)', snackPM:'Infusión + 30g frutos secos + 1 pera (150g)', cena:'Revuelto de champiñones (150g) con 2 huevos + ensalada (100g) + 1 yogur griego 0% (125g)'},
       {dia:'Domingo',   desayuno:'Tortilla francesa (2 huevos) con espárragos (80g) + 2 tostadas integrales (80g) con AOVE (10g)', snackAM:'150g piña natural + 1 yogur natural (125g)', comida:'180g ternera magra al horno + 200g patata asada + ensalada (150g)', snackPM:'1 yogur griego 0% (125g) + 30g nueces', cena:'Sopa de verduras (300ml) + 200g pescado blanco a la plancha + 40g pan integral con AOVE (5g)'},
     ]
   },
   2: { // Alta proteína
     dias: [
       {dia:'Lunes',     desayuno:'235g queso cottage + 175g fresas + 10g semillas de chía', snackAM:'2 lonchas de pavo (40g) + 1 huevo duro', comida:'210g pechuga de pollo + 235g brócoli + 70g quinoa + 60g aguacate', snackPM:'Batido: 235ml leche desnatada + 35g whey + ½ plátano (60g)', cena:'235g ternera magra o 4 claras + 175g espárragos + ensalada (175g)'},
-      {dia:'Martes',    desayuno:'Tortilla de 3 claras + 40g jamón york', snackAM:'190g requesón + 10 almendras', comida:'225g salmón a la plancha + 190g garbanzos + ensalada (125g)', snackPM:'1 yogur proteico (200g)', cena:'190g pavo a la plancha + 190g verduras salteadas'},
-      {dia:'Miércoles', desayuno:'250g skyr/yogur proteico + 30g nueces', snackAM:'30g jamón serrano + 1 fruta pequeña (100g)', comida:'200g ternera magra + 100g arroz integral + ensalada (150g) + AOVE (10g)', snackPM:'Batido proteico (30g) con agua', cena:'4 claras de huevo + 100g espinacas salteadas + 40g pan integral con AOVE (5g)'},
-      {dia:'Jueves',    desayuno:'Batido: 250ml leche + 40g avena + 1 plátano (100g)', snackAM:'200g cottage + canela + 1 fruta (150g)', comida:'180g merluza + 200g lentejas + ensalada (100g) + 40g pan integral', snackPM:'30g almendras', cena:'180g pechuga de pollo + 150g champiñones salteados + 150g patata cocida'},
+      {dia:'Martes',    desayuno:'Tortilla de 3 claras + 40g jamón york + 1 yogur griego 0% (125g)', snackAM:'190g requesón + 10 almendras', comida:'225g salmón a la plancha + 190g garbanzos + ensalada (125g)', snackPM:'1 yogur proteico (200g)', cena:'190g pavo a la plancha + 190g verduras salteadas'},
+      {dia:'Miércoles', desayuno:'250g skyr/yogur proteico + 30g nueces', snackAM:'30g jamón serrano + 1 fruta pequeña (100g)', comida:'200g ternera magra + 100g arroz integral + ensalada (150g) + AOVE (10g)', snackPM:'Batido proteico (30g) con agua', cena:'4 claras de huevo + 100g espinacas salteadas + 100g pavo a la plancha + AOVE (5g)'},
+      {dia:'Jueves',    desayuno:'Porridge de avena (40g) con 250ml leche + 1 plátano (100g) + 1 yogur griego 0% (125g)', snackAM:'200g cottage + canela + 1 fruta (150g)', comida:'180g merluza + 200g lentejas + ensalada (100g) + 40g pan integral', snackPM:'30g almendras', cena:'180g pechuga de pollo + 150g champiñones salteados + 150g patata cocida'},
       {dia:'Viernes',   desayuno:'3 huevos revueltos + 35g jamón york', snackAM:'1 yogur griego (150g) + 10g semillas', comida:'220g solomillo de cerdo + 75g quinoa + 240g brócoli', snackPM:'240g requesón + 120g fresas', cena:'220g atún a la plancha + ensalada de pepino (180g)'},
       {dia:'Sábado',    desayuno:'190g requesón + 125g frutos rojos', snackAM:'2 huevos duros', comida:'190g gambas a la plancha + 100g arroz integral + ensalada (125g)', snackPM:'Batido proteico (40g) con agua', cena:'Hamburguesa de pavo casera (190g) + 190g verduras al vapor'},
       {dia:'Domingo',   desayuno:'Tortilla de 3 claras + 1 huevo con 100g espinacas + 2 tostadas integrales (80g)', snackAM:'30g jamón serrano + 1 fruta pequeña (100g)', comida:'200g pollo al horno + 200g boniato + ensalada (100g) + AOVE (10g)', snackPM:'150g yogur griego 0% + 20g almendras', cena:'180g salmón al vapor + 150g espárragos'},
@@ -1450,13 +1450,13 @@ const MENU_SEMANAL = {
   },
   3: { // Flexible
     dias: [
-      {dia:'Lunes',     desayuno:'50g cereal integral + 250ml leche semidesnatada + 1 plátano (100g)', snackAM:'1 fruta (150g) + 1 yogur (125g)', comida:'150g proteína a elegir + ración vegetal (150g) + 150g carbohidrato cocido + AOVE (10g)', snackPM:'1 fruta (150g) + 2 galletas integrales (20g) + 20g frutos secos', cena:'Tortilla de 2 huevos + ensalada (100g) + 40g pan integral + caldo (200ml) + 1 yogur natural (125g)'},
-      {dia:'Martes',    desayuno:'3 tostadas integrales (90g) con mermelada light (10g) y 30g queso fresco', snackAM:'1 yogur (125g) + 20g frutos secos', comida:'100g pasta integral con verduras (100g) y 100g atún + 1 fruta (150g)', snackPM:'1 fruta (150g) + 2 galletas integrales (20g)', cena:'Pizza casera integral de verduras (ración moderada, ~200g) + ensalada (150g) + 1 yogur natural (125g)'},
-      {dia:'Miércoles', desayuno:'50g cereales integrales con 250ml leche + 1 plátano (100g)', snackAM:'20g frutos secos + 1 fruta (150g)', comida:'200g lentejas con un toque de chorizo (20g) + ensalada (100g) + 40g pan integral + 1 fruta (150g)', snackPM:'1 vaso de kéfir (200ml) + 2 galletas integrales (20g)', cena:'Wrap integral (1 tortilla 50g) de pollo (100g) y verduras (80g) + 1 fruta (150g)'},
-      {dia:'Jueves',    desayuno:'2 tostadas integrales (80g) con ½ aguacate (60g) y 1 huevo poché', snackAM:'1 fruta (150g) + 20g frutos secos', comida:'Arroz tres delicias casero (250g) + ensalada (100g) + 1 yogur natural (125g)', snackPM:'2 galletas integrales (20g) + 1 yogur (125g)', cena:'Tortilla de patata (ración ~150g) + ensalada (150g) + 1 fruta (150g) + 40g pan integral'},
-      {dia:'Viernes',   desayuno:'1 tostada integral (40g) con 30g queso fresco + Batido de frutas (200ml) con 125g yogur', snackAM:'1 yogur (125g) + 20g frutos secos', comida:'Fajitas de pollo (150g) con verduras (150g) y 1 tortilla (50g) + 1 fruta (150g)', snackPM:'1 fruta (150g) + 2 galletas integrales (20g)', cena:'Crema de verduras (300ml) + tortilla francesa (2 huevos) + 40g pan integral + 1 yogur natural (125g)'},
-      {dia:'Sábado',    desayuno:'Bocadillo integral pequeño (60g pan) con 40g jamón y 30g queso + 1 fruta (150g)', snackAM:'20g frutos secos + 1 fruta (150g)', comida:'Paella mixta (ración moderada, ~300g) + ensalada (100g)', snackPM:'1 yogur (125g) + 20g frutos secos', cena:'Ensalada de quinoa (200g) o sushi casero (250g)'},
-      {dia:'Domingo',   desayuno:'Tostadas francesas integrales (60g) con fruta (100g)', snackAM:'1 yogur (125g) + 30g frutos secos', comida:'Cocido reducido en grasa (ración ~300g) + ensalada (100g) + 40g pan integral + 1 fruta (150g)', snackPM:'1 fruta (150g) + 30g frutos secos', cena:'Crema de calabacín (300ml) + tortilla francesa (2 huevos) + 40g pan integral'},
+      {dia:'Lunes',     desayuno:'50g cereal integral + 250ml leche semidesnatada + 1 yogur griego 0% (125g)', snackAM:'1 fruta (150g) + 1 yogur (125g)', comida:'150g proteína a elegir + ración vegetal (150g) + 150g carbohidrato cocido + AOVE (10g)', snackPM:'1 fruta (150g) + 2 galletas integrales (20g) + 20g frutos secos', cena:'Tortilla de 2 huevos + ensalada (100g) + 40g pan integral + caldo (200ml) + 1 yogur griego 0% (125g)'},
+      {dia:'Martes',    desayuno:'2 tostadas integrales (60g) con mermelada light (10g) y 50g queso fresco + 1 yogur griego 0% (125g)', snackAM:'1 yogur (125g) + 20g frutos secos', comida:'100g pasta integral con verduras (100g) y 100g atún + 1 fruta (150g)', snackPM:'1 fruta (150g) + 2 galletas integrales (20g)', cena:'Pizza casera integral de verduras (ración moderada, ~200g) + 60g jamón + ensalada (150g)'},
+      {dia:'Miércoles', desayuno:'50g cereales integrales con 250ml leche + 1 yogur griego 0% (125g)', snackAM:'20g frutos secos + 1 fruta (150g)', comida:'200g lentejas con un toque de chorizo (20g) + ensalada (100g) + 40g pan integral + 1 yogur griego 0% (125g)', snackPM:'1 vaso de kéfir (200ml) + 2 galletas integrales (20g)', cena:'Wrap integral (1 tortilla 50g) de pollo (100g) y verduras (80g) + 1 fruta (150g)'},
+      {dia:'Jueves',    desayuno:'1 tostada integral (40g) con ½ aguacate (60g) y 3 huevos poché', snackAM:'1 fruta (150g) + 20g frutos secos', comida:'Arroz tres delicias casero (250g) + ensalada (100g) + 1 yogur griego 0% (125g)', snackPM:'2 galletas integrales (20g) + 1 yogur (125g)', cena:'Tortilla de patata (ración ~150g) + 100g pavo a la plancha + ensalada (150g)'},
+      {dia:'Viernes',   desayuno:'1 tostada integral (40g) con 50g queso fresco + 1 yogur griego 0% (125g) + 100g de plátano', snackAM:'1 yogur (125g) + 20g frutos secos', comida:'Fajitas de pollo (150g) con verduras (150g) y 1 tortilla (50g) + 1 fruta (150g)', snackPM:'150g de fruta + 2 galletas integrales (20g)', cena:'Crema de verduras (300ml) + tortilla francesa (2 huevos) + 40g pan integral + 1 yogur griego 0% (125g)'},
+      {dia:'Sábado',    desayuno:'Bocadillo integral pequeño (60g pan) con 40g jamón y 30g queso + 1 fruta (150g)', snackAM:'20g frutos secos + 1 fruta (150g)', comida:'Paella mixta (ración moderada, ~300g) + ensalada (100g) + 1 yogur griego 0% (125g)', snackPM:'1 yogur griego 0% (125g) + 20g frutos secos', cena:'Ensalada de quinoa (150g) + 100g pollo a la plancha + 1 yogur griego 0% (125g)'},
+      {dia:'Domingo',   desayuno:'Tostadas francesas integrales (60g) con fruta (100g) + 1 yogur griego 0% (125g)', snackAM:'1 yogur (125g) + 30g frutos secos', comida:'Cocido reducido en grasa (ración ~300g) + 100g pollo a la plancha + ensalada (100g) + 1 fruta (150g)', snackPM:'1 fruta (150g) + 30g frutos secos', cena:'Crema de calabacín (300ml) + tortilla francesa (2 huevos) + 1 yogur griego 0% (125g)'},
     ]
   }
 };
@@ -1542,16 +1542,22 @@ function buildPlanificadorSemanal(num) {
   if (!data) return '';
   const rows = data.dias.map((d, i) => {
     const m = menuDia(num, i), E = m.E;
+    const renal = (planData.cribado || []).includes('renal'), PG = planData.glp1 && !renal ? proteinaGLP1(planData.pesoObjetivo || planData.pesoActual, planData.edad, planData.glp1Intenso) : null;
+    const mins = { desayuno: 20, comida: 25, cena: 25 };   // mínimos de proteína por comida principal con GLP-1
+    const pm = k => { if (!PG || !E.ok) return ''; const v = E.protComidas[k], bajo = mins[k] && v < mins[k];
+      const falta = bajo ? Math.ceil(mins[k] - v) : 0, r5 = x => Math.max(5, Math.round(x / 5) * 5);
+      const sug = bajo ? ` · +${falta} g: p. ej. ${r5(falta / ALIMENTOS.A21.p * 100)} g de skyr o ${r5(falta / ALIMENTOS.A03.p * 100)} g de pollo` : '';
+      return `<div style="font-weight:400;font-size:0.65rem;color:${bajo ? '#b91c1c' : '#4b7a51'}">~${Math.round(v)} g prot${bajo ? ' ⚠' : ''}${sug}</div>`; };
     const nota = E.ok
-      ? `<div class="text-gray-500" style="font-weight:400">~${E.kcal} kcal${Math.abs(E.factor-1) >= 0.03 ? ' (×'+E.factor.toFixed(2).replace('.',',')+')' : ''}${E.limitado ? ' ⚠' : ''}</div>`
+      ? `<div class="text-gray-500" style="font-weight:400">~${E.kcal} kcal${Math.abs(E.factor-1) >= 0.03 ? ' (×'+E.factor.toFixed(2).replace('.',',')+')' : ''}${E.limitado ? ' ⚠' : ''}</div><div class="text-gray-500" style="font-weight:400">~${E.prot} g prot${PG ? (E.prot >= PG.min ? ' ✓' : ' ↓') : ''}</div>`
       : '<div class="text-amber-700" style="font-weight:400">sin ajustar</div>';
     return `<tr>
     <td data-label="Día"><strong>${d.dia}</strong>${nota}</td>
-    <td data-label="Desayuno">${enlazarRecetas(m.desayuno)}</td>
-    <td data-label="Snack AM">${enlazarRecetas(m.snackAM)}</td>
-    <td data-label="Comida">${enlazarRecetas(m.comida)}</td>
-    <td data-label="Snack PM">${enlazarRecetas(m.snackPM)}</td>
-    <td data-label="Cena">${enlazarRecetas(m.cena)}</td>
+    <td data-label="Desayuno">${enlazarRecetas(m.desayuno)}${pm('desayuno')}</td>
+    <td data-label="Snack AM">${enlazarRecetas(m.snackAM)}${pm('snackAM')}</td>
+    <td data-label="Comida">${enlazarRecetas(m.comida)}${pm('comida')}</td>
+    <td data-label="Snack PM">${enlazarRecetas(m.snackPM)}${pm('snackPM')}</td>
+    <td data-label="Cena">${enlazarRecetas(m.cena)}${pm('cena')}</td>
   </tr>`; }).join('');
 
   return `
@@ -1562,7 +1568,7 @@ function buildPlanificadorSemanal(num) {
           <tbody>${rows}</tbody>
         </table>
       </div>
-      <p class="text-xs text-gray-400 mt-2">Raciones ajustadas a tu objetivo de ${planData.calObjetivo} kcal/día: solo se escalan las cantidades en gramos o ml; las unidades (huevos, piezas) no cambian. ⚠ = el ajuste llega a su límite (×0,5 a ×1,5) y el día no coincide con tu objetivo: si se queda corto, completa con raciones adicionales o consulta a tu dietista. «sin ajustar» = el menú incluye algún alimento sin datos. Valores nutricionales: BEDCA (Consorcio BEDCA y AESAN) y estimaciones orientativas.${planData.glp1 ? ' <strong>GLP-1:</strong> las raciones no se amplían (saciedad precoz); ⚠ indica que el menú no alcanza el objetivo calórico. Prioriza la proteína y la tolerancia, y consulta con tu equipo médico.' : ''}</p>
+      <p class="text-xs text-gray-400 mt-2">Raciones ajustadas a tu objetivo de ${planData.calObjetivo} kcal/día: solo se escalan las cantidades en gramos o ml; las unidades (huevos, piezas) no cambian. ⚠ = el ajuste llega a su límite (×0,5 a ×1,5) y el día no coincide con tu objetivo: si se queda corto, completa con raciones adicionales o consulta a tu dietista. «sin ajustar» = el menú incluye algún alimento sin datos. Valores nutricionales (kcal y proteína): BEDCA (Consorcio BEDCA y AESAN) y estimaciones orientativas.${planData.glp1 && !(planData.cribado || []).includes('renal') ? ' <strong>Proteína con GLP-1:</strong> ✓ = el día alcanza el mínimo de tu objetivo; ↓ = por debajo; ⚠ en rojo = comida principal por debajo de su mínimo (desayuno 20 g, comida y cena 25 g).' : ''}${planData.glp1 ? ' <strong>GLP-1:</strong> las raciones no se amplían (saciedad precoz); ⚠ indica que el menú no alcanza el objetivo calórico. Prioriza la proteína y la tolerancia, y consulta con tu equipo médico.' : ''}</p>
     </div>`;
 }
 
@@ -2051,7 +2057,9 @@ function descargarPDF() {
         tableRowMulti([mm.dia, mm.desayuno, mm.snackAM, mm.comida, mm.snackPM, mm.cena], sW, i%2===0);
       });
       doc.setFontSize(9.5); // restaurar tamaño estándar para el resto del documento
-      bullet('Raciones ajustadas a '+d.calObjetivo+' kcal/dia (solo cantidades en g/ml; las unidades no cambian). Valores: BEDCA (AESAN) y estimaciones orientativas.');
+      const pAvg = Math.round(semanalData.dias.reduce((s, _, i2) => s + menuDia(numDieta, i2).E.prot, 0) / 7);
+      const pgm = (d.glp1 && !(d.cribado || []).includes('renal')) ? proteinaGLP1(d.pesoObjetivo || d.pesoActual, d.edad, d.glp1Intenso) : null;
+      bullet('Raciones ajustadas a '+d.calObjetivo+' kcal/dia (solo cantidades en g/ml; las unidades no cambian). Proteina media estimada del menu: '+pAvg+' g/dia'+(pgm ? ' (objetivo GLP-1: '+pgm.min+'-'+pgm.max+' g/dia)' : '')+'. Valores: BEDCA (AESAN) y estimaciones orientativas.');
       y += 6;
     }
   });
@@ -3664,7 +3672,7 @@ function buildDistribucionSemanal(acts) {
 document.addEventListener('DOMContentLoaded', function() {
   // Sello de versión visible: permite comprobar qué archivo está sirviendo realmente el navegador
   const vp = document.createElement('p'); vp.id = 'versionApp'; vp.className = 'text-center text-xs text-gray-400 pb-6';
-  vp.textContent = 'WalkForLife v2.3 · nov-2026 (GLP-1, menús escalados, ganancia con bajo peso, cribado)'; document.querySelector('main').appendChild(vp);
+  vp.textContent = 'WalkForLife v2.5 · nov-2026 (GLP-1, menús escalados, ganancia con bajo peso, cribado)'; document.querySelector('main').appendChild(vp);
   // 0) Inicializar el selector de la calculadora de calorías (debe existir antes de restaurar)
   inicializarSelectorCalculadora();
 

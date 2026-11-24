@@ -65,7 +65,7 @@ let d0=A.MENU_ESC[2][0],E=M.escalarMenuDia(d0,1500);
 t('escalado: alcanza el objetivo cuando no se limita',!E.limitado&&Math.abs(E.kcal-1500)<=2,JSON.stringify([E.kcal,E.factor]));
 E=M.escalarMenuDia(A.MENU_ESC[3][0],3000); t('escalado: factor limitado a 1,5 y marcado (desvío >3 %)',E.limitado&&E.factor===1.5&&E.kcal<3000);
 E=M.escalarMenuDia(A.MENU_ESC[1][0],1000); t('escalado a la baja: reduce cantidades (factor <1)',E.factor<1&&E.kcal===1000||E.limitado);
-t('unidades fijas: "2 huevos" no cambia al escalar',M.escalarMenuDia(A.MENU_ESC[1][0],1900).textos.desayuno.includes('2 huevos'));
+t('unidades fijas: "3 huevos" no cambia al escalar',M.escalarMenuDia(A.MENU_ESC[1][0],1900).textos.desayuno.includes('3 huevos'));
 t('aplicarFactorTpl redondea a 5 y mínimo 5',M.aplicarFactorTpl('{{150g}} y {{5g}}',1.22)==='185g y 5g',M.aplicarFactorTpl('{{150g}} y {{5g}}',1.22));
 const bad=JSON.parse(JSON.stringify(A.MENU_ESC[1][0])); bad.cena.k=false; E=M.escalarMenuDia(bad,1800);
 t('si falta algún dato el día no se escala',!E.ok&&E.factor===1&&E.textos.desayuno===M.aplicarFactorTpl(bad.desayuno.t,1));
@@ -120,4 +120,23 @@ t('GLP-1 + enfermedad renal: el PDF no da cifras de proteína',Lr.includes('nefr
  t('menús: objetivo de 1.200 kcal alcanzable reduciendo raciones (desvío ≤ 3 %, sin ⚠)',Object.keys(A.MENU_ESC).every(dk=>A.MENU_ESC[dk].every(d=>{const e=M.escalarMenuDia(d,1200);return !e.limitado&&Math.abs(e.kcal-1200)<=36;})));
  {let lim=0,okd=true;Object.keys(A.MENU_ESC).forEach(dk=>A.MENU_ESC[dk].forEach(d=>{const e=M.escalarMenuDia(d,1000);if(e.limitado){lim++;if(e.factor!==0.5)okd=false;}else if(Math.abs(e.kcal-1000)>30)okd=false;}));
  t('menús: con 1.000 kcal cada día o alcanza el objetivo (±3 %) o se señala limitado en el tope ×0,5',okd&&lim>0,'limitados: '+lim);}}
+
+// --- Proteína de los menús ---
+t('datos: todos los alimentos tienen proteína (g/100 g)',Object.values(A.ALIMENTOS).every(f=>typeof f.p==='number'&&f.p>=0&&f.p<=100));
+t('datos: correcciones del autor (dorada a la plancha 17 g; garbanzos hervidos 8,9 g)',A.ALIMENTOS.A12.p===17&&A.ALIMENTOS.A45.p===8.9);
+t('menús: cada comida trae proteína fija y escalable',Object.values(A.MENU_ESC).every(dia=>dia.every(d=>Object.values(d).every(c=>typeof c.pf==='number'&&typeof c.pe==='number'))));
+{const pr=[];for(const dk of Object.keys(A.MENU_ESC))for(const d of A.MENU_ESC[dk])pr.push(M.escalarMenuDia(d,1550).prot);
+ t('menús: la proteína diaria estimada es plausible (45-200 g) en los 21 días',pr.length===21&&Math.min(...pr)>=45&&Math.max(...pr)<=200,Math.min(...pr)+'-'+Math.max(...pr));}
+{const d=A.MENU_ESC[1][0],e1=M.escalarMenuDia(d,1550),sum=Object.values(e1.protComidas).reduce((a,b)=>a+b,0);
+ t('proteína: el total diario coincide con la suma de las comidas (±1 g)',Math.abs(sum-e1.prot)<=1.5,sum+' vs '+e1.prot);
+ const e2=M.escalarMenuDia(d,2300); t('proteína: al ampliar raciones la proteína aumenta (solo la parte escalable)',e2.prot>e1.prot&&e2.factor>e1.factor);
+ const e0=M.escalarMenuDia(d,1550,{max:1}); t('proteína: con GLP-1 (tope ×1,0) nunca supera la del menú base',M.escalarMenuDia(d,2300,{max:1}).prot<=Math.round(Object.values(M.escalarMenuDia(d,1,{min:1,max:1}).protComidas).reduce((a,b)=>a+b,0))+1);}
+
+// --- Refuerzo de proteína (v2.5): con las raciones base todas las comidas principales alcanzan su mínimo GLP-1 ---
+{const mins={desayuno:20,comida:25,cena:25};let bajo=[];const dias=[];
+ for(const dk of Object.keys(A.MENU_ESC))A.MENU_ESC[dk].forEach((d,i)=>{const e=M.escalarMenuDia(d,1550,{min:1,max:1});dias.push(e.prot);for(const m in mins)if(e.protComidas[m]<mins[m])bajo.push(dk+'-'+(i+1)+' '+m+' '+e.protComidas[m]);});
+ t('proteína: desayuno ≥ 20 g, comida ≥ 25 g y cena ≥ 25 g en los 21 días (raciones base)',bajo.length===0,bajo.join(', '));
+ t('proteína: todos los días ≥ 80 g con las raciones base',Math.min(...dias)>=80,Math.min(...dias));
+ const kb=[];for(const dk of Object.keys(A.MENU_ESC))for(const d of A.MENU_ESC[dk])kb.push(M.escalarMenuDia(d,1550,{min:1,max:1}).kcalBase);
+ t('menús: tras reforzar la proteína los 21 días siguen en 1.480-1.620 kcal',Math.min(...kb)>=1480&&Math.max(...kb)<=1620,Math.min(...kb)+'-'+Math.max(...kb));}
 console.log(fallos?fallos+' FALLOS':'Todo correcto'); process.exit(fallos?1:0);

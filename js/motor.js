@@ -119,8 +119,9 @@ function escalarMenuDia(dia,objetivo,opt){
   let f=1,limitado=false;
   if(ok&&objetivo>0){f=(objetivo-fijo)/esc; if(f<o.min){f=o.min;limitado=true;} if(f>o.max){f=o.max;limitado=true;}}
   const textos={}; C.forEach(m=>textos[m]=aplicarFactorTpl(dia[m].t,f));
+  const pf=C.reduce((s,m)=>s+(dia[m].pf||0),0), pe=C.reduce((s,m)=>s+(dia[m].pe||0),0), protComidas={}; C.forEach(m=>protComidas[m]=Math.round(((dia[m].pf||0)+(dia[m].pe||0)*f)*10)/10);
   const kcal=Math.round(fijo+esc*f); if(limitado&&objetivo>0&&Math.abs(kcal-objetivo)/objetivo<=0.03)limitado=false; // el tope solo se señala si el día se desvía más de un 3 % del objetivo
-  return {ok,factor:+f.toFixed(2),limitado,kcalBase:Math.round(fijo+esc),kcal,estimado:C.some(m=>dia[m].s==='E'),textos};}
+  return {ok,factor:+f.toFixed(2),limitado,kcalBase:Math.round(fijo+esc),kcal,prot:Math.round(pf+pe*f),protComidas,estimado:C.some(m=>dia[m].s==='E'),textos};}
 
 /** Aviso cuando el suelo calórico (1.200 / 1.500 kcal) limita el déficit previsto */
 function avisoPisoCalorico(E,cambio){

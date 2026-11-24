@@ -9,7 +9,7 @@ f=lambda x:(float(x) if x not in (None,'') else None)
 F={}  # id -> dict(n,k,s,u)
 for i,r in rows.items():
     if r['fuente_dato']=='calcular_desde_receta': continue
-    F[i]={'n':r['alimento_en_los_menus'],'k':f(r['kcal_100g']),'s':'BEDCA' if f(r['kcal_100g']) else None,'u':f(r['gramos_por_unidad'])}
+    F[i]={'n':r['alimento_en_los_menus'],'k':f(r['kcal_100g']),'s':'BEDCA' if f(r['kcal_100g']) else None,'u':f(r['gramos_por_unidad']),'p':f(r['proteina_g_100g'])}
 def setk(i,k,s,n=None):
     F[i]['k']=k;F[i]['s']=s
     if n:F[i]['n']=n
@@ -22,7 +22,7 @@ for i,k in EST.items(): setk(i,k,'estimación')
 setk('A72',round((F['A69']['k']+F['A70']['k'])/2,1),'estimación (media nuez/almendra BEDCA)')
 F['A70']['u']=F['A70']['u'] or 1.2; F['A71']['u']=F['A71']['u'] or 5
 mean=lambda *ids: st.mean(F[i]['k'] for i in ids)
-def derived(i,n,k,s='estimación'): F[i]={'n':n,'k':round(k,1),'s':s,'u':None}
+def derived(i,n,k,s='estimación'): F[i]={'n':n,'k':round(k,1),'s':s,'u':None,'p':None}
 derived('ENS','Ensalada (media lechuga, tomate, pepino)',mean('A53','A50','A52'),'BEDCA (media)')
 derived('VER','Verduras variadas (media calabacín, pimiento, cebolla, tomate)',mean('A48','A51','A58','A50'),'BEDCA (media)')
 derived('FRU','Fruta de temporada (media manzana, pera, plátano, naranja)',mean('A61','A62','A63','A67'),'BEDCA (media)')
@@ -48,9 +48,17 @@ DISH={'paella_vm':('Paella de verduras y marisco',[('A36',150),('A18',200),('VER
 'hamb':('Hamburguesa de pavo casera',[('A04',150),('A74',5)],150),
 'fajitas':('Fajitas de pollo',[('A03',120),('A74',5)],120),
 'revuelto':('Revuelto de champiñones',[('A56',150),('A74',5)],150)}
+# proteína (g/100 g): BEDCA del CSV; correcciones del autor y estimaciones de referencia (marcadas como estimación)
+F['A12']['p']=17.0; F['A45']['p']=8.9; F['A20']['p']=10.0; F['A74']['p']=0.0
+for i,v in {'A18':13,'A21':11,'A22':11,'A26':14,'A34':10,'A39':9,'A40':7,'A46':8,'A65':0.8,'A71':14.3,'A73':17,'A75':0.5,'A76':0.3,'A77':80,'A78':0.5}.items(): F[i]['p']=v
+F['A72']['p']=round((F['A69']['p']+F['A70']['p'])/2,1)
+for i,ids in {'ENS':('A53','A50','A52'),'VER':('A48','A51','A58','A50'),'FRU':('A61','A62','A63','A67'),'PROT':('A03','A06','A11')}.items(): F[i]['p']=round(st.mean(F[j]['p'] for j in ids),1)
+F['CARB']['p']=2.7; F['ARC']['p']=2.7; F['GUI']['p']=5.4
+for i,v in F.items():
+    if v.get('k') is not None and v.get('p') is None: raise SystemExit('Falta proteína de '+i)
 for k,(n,ing,w) in DISH.items():
-    F['P_'+k]={'n':n,'k':round(sum(F[i]['k']*g/100 for i,g in ing)/w*100,1),'s':'estimación (receta)','u':None}
-F['P_batido']={'n':'Batido de frutas','k':F['FRU']['k'],'s':'estimación','u':None}
+    F['P_'+k]={'n':n,'k':round(sum(F[i]['k']*g/100 for i,g in ing)/w*100,1),'p':round(sum(F[i]['p']*g/100 for i,g in ing)/w*100,1),'s':'estimación (receta)','u':None}
+F['P_batido']={'n':'Batido de frutas','k':F['FRU']['k'],'p':F['FRU']['p'],'s':'estimación','u':None}
 RULES=[('batido proteico','A77'),('batido de frutas','P_batido'),('paella de verduras y marisco','P_paella_vm'),('paella mixta','P_paella_mx'),('pizza','P_pizza'),('cocido','P_cocido'),('tres delicias','P_tresdel'),
 ('tortilla de patata','P_tort_pat'),('lentejas estofadas','P_lent_est'),('sopa','P_sopa'),('crema de calabaza','P_cr_calabaza'),('crema de calabac','P_cr_calabacin'),('crema de verduras','P_cr_verduras'),
 ('sushi','P_sushi'),('ensalada de quinoa','P_ens_quinoa'),('tostadas francesas','P_tost_fr'),('pollo al curry','P_curry'),('hamburguesa de pavo','P_hamb'),('fajitas','P_fajitas'),('revuelto de champi','P_revuelto'),
@@ -74,19 +82,20 @@ def split(s,seps):  # separa solo fuera de paréntesis
         cur+=c;i+=1
     return [x.replace('\x01',' ') for x in out+[cur]]
 TOK=re.compile(r'(\d+(?:[.,]\d+)?)\s*(g|ml)\b')
-OVR={'Wrap integral (1 tortilla 50g) de pollo (100g)':('Wrap integral (1 tortilla 50g) de pollo ({{100g}})',F['A39']['k']*.5,F['A03']['k']),
- 'Tortilla de calabacín (2 huevos + 100g calabacín)':('Tortilla de calabacín (2 huevos + 100g calabacín)',F['A01']['k']*1+F['A48']['k']+F['A74']['k']*.05,0)}
+NUT='k'   # nutriente que calculan alt_kcal/comida: 'k' = kcal, 'p' = proteína (g)
+OVR={'Wrap integral (1 tortilla 50g) de pollo (100g)':('Wrap integral (1 tortilla 50g) de pollo ({{100g}})',{'k':(F['A39']['k']*.5,F['A03']['k']),'p':(F['A39']['p']*.5,F['A03']['p'])}),
+ 'Tortilla de calabacín (2 huevos + 100g calabacín)':('Tortilla de calabacín (2 huevos + 100g calabacín)',{'k':(F['A01']['k']*1+F['A48']['k']+F['A74']['k']*.05,0),'p':(F['A01']['p']*1+F['A48']['p']+F['A74']['p']*.05,0)})}
 def alt_kcal(a):
     """devuelve (tpl, fijo, esc, ok, est)"""
     a0=a.strip()
-    if a0 in OVR: t,fj,es=OVR[a0]; return t,fj,es,True,False
+    if a0 in OVR: t,v=OVR[a0]; fj,es=v[NUT]; return t,fj,es,True,False
     fid=food(a0)
     if fid=='Z': return a0,0,0,True,False
     tok=TOK.findall(a0); cnt=re.search(r'(\d+|½)\s+(?!g\b|ml\b)[a-záéíóúñ]+',a0)
-    if fid is None or F[fid]['k'] is None:
+    if fid is None or F[fid][NUT] is None:
         return a0,0,0,(not tok and not cnt),False   # sin número ni alimento: descriptor ("verduras")
     est='estim' in (F[fid]['s'] or '')
-    k=F[fid]['k']; unit_start=re.match(r'\s*(\d+|½)\s+(?!g\b|ml\b)[a-záéíóúñ]',a0)
+    k=F[fid][NUT]; unit_start=re.match(r'\s*(\d+|½)\s+(?!g\b|ml\b)[a-záéíóúñ]',a0)
     if tok:
         q=float(tok[0][0].replace(',','.'))
         kc=k*q/100
@@ -130,11 +139,12 @@ for dk,dv in M.items():
     for d in dv['dias']:
         day={};tf=te=0;allok=True
         for m in ('desayuno','snackAM','comida','snackPM','cena'):
-            fj,es,ok,est=comida(d[m]); day[m]={'t':tpl_of(d[m]),'f':round(fj,1),'e':round(es,1),'k':ok,'s':'E' if est else 'B'}
+            NUT='k'; fj,es,ok,est=comida(d[m]); NUT='p'; pf,pe,okp,_e=comida(d[m]); NUT='k'
+            day[m]={'t':tpl_of(d[m]),'f':round(fj,1),'e':round(es,1),'pf':round(pf,1),'pe':round(pe,1),'k':ok and okp,'s':'E' if est else 'B'}
             tf+=fj;te+=es;allok&=ok
-        OUT[dk].append(day); stats.append((dk,d['dia'],round(tf+te),round(tf),allok,[m for m in day if not day[m]['k']]))
+        OUT[dk].append(day); stats.append((dk,d['dia'],round(tf+te),round(tf),allok,[m for m in day if not day[m]['k']],'prot',round(sum(day[m]['pf']+day[m]['pe'] for m in day))))
 F2={k:{kk:vv for kk,vv in v.items() if vv is not None} for k,v in F.items()}
-_cab="/* WalkForLife - datos nutricionales de los menús (GENERADO por tools/generar_alimentos.py; no editar a mano).\n * Fuente: BEDCA (Consorcio BEDCA y AESAN, https://www.bedca.net) cuando s='BEDCA'; el resto son estimaciones orientativas\n * (s='estimación...') derivadas de recetas o de valores de referencia. Revisar antes de uso clínico.\n * k = kcal/100 g (o ml), u = gramos por unidad.\n * MENU_ESC[dieta][día][comida] = { t: plantilla con {{cantidad}} escalable, f: kcal fijas (unidades), e: kcal escalables, k: datos completos, s: B|E (E = usa estimaciones) } */\n"
+_cab="/* WalkForLife - datos nutricionales de los menús (GENERADO por tools/generar_alimentos.py; no editar a mano).\n * Fuente: BEDCA (Consorcio BEDCA y AESAN, https://www.bedca.net) cuando s='BEDCA'; el resto son estimaciones orientativas\n * (s='estimación...') derivadas de recetas o de valores de referencia. Revisar antes de uso clínico.\n * k = kcal/100 g (o ml), p = proteína g/100 g, u = gramos por unidad.\n * pf/pe = proteína (g) fija/escalable de cada comida.\n * MENU_ESC[dieta][día][comida] = { t: plantilla con {{cantidad}} escalable, f: kcal fijas (unidades), e: kcal escalables, k: datos completos, s: B|E (E = usa estimaciones) } */\n"
 (ROOT/'js'/'alimentos.js').write_text(_cab+"const ALIMENTOS = "+json.dumps(F2,ensure_ascii=False,separators=(',',':'))+";\nconst MENU_ESC = "+json.dumps(OUT,ensure_ascii=False,separators=(',',':'))+";\nif (typeof module !== 'undefined' && module.exports) module.exports = { ALIMENTOS, MENU_ESC };\n",encoding='utf-8')
 print('js/alimentos.js regenerado')
 print('platos k/100:',{k:v['k'] for k,v in F.items() if k.startswith('P_')})

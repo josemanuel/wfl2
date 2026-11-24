@@ -142,6 +142,17 @@ const $=(w,id)=>w.document.getElementById(id), hid=(w,id)=>$(w,id).classList.con
  // --- Las casillas de GLP-1 y cribado se guardan al marcarlas (aunque no se genere el plan) ---
  d=mk(); w=d.window; await tick(); await chk(w,'tx-glp1'); await chk(w,'cr-renal'); await new Promise(r=>setTimeout(r,700));
  const rawC=JSON.parse(w.localStorage.getItem('walkforlife_data_v1')||'{}'); ok('GLP-1 y cribado se guardan al marcarlos sin generar el plan',rawC.formulario&&rawC.formulario.glp1===true&&(rawC.formulario.cribado||[]).includes('renal'),JSON.stringify(rawC.formulario||{}).slice(0,200));
+
+ // --- Proteína en el planificador (UI) ---
+ d=mk(); w=d.window; await tick(); await base(w,'170','90','mujer'); w.generarPlan(); await tick();
+ const dp=$(w,'dietaContent').innerHTML; ok('proteína: cada día muestra su proteína estimada',(dp.match(/~\d{2,3} g prot/g)||[]).length>=21,String((dp.match(/~\d{2,3} g prot/g)||[]).length));
+ ok('proteína: sin GLP-1 no aparecen marcas por comida ni ✓/↓',!dp.includes('g prot ⚠')&&!/g prot [✓↓]/.test(dp));
+ d=mk(); w=d.window; await tick(); await base(w,'170','90','mujer'); await chk(w,'tx-glp1'); w.generarPlan(); await tick();
+ const dg2=$(w,'dietaContent').innerHTML; ok('proteína GLP-1: marcas ✓/↓ por día y proteína por comida',/g prot [✓↓]/.test(dg2)&&(dg2.match(/~\d{1,3} g prot/g)||[]).length>60);
+ ok('proteína GLP-1: las comidas principales por debajo del mínimo se marcan con ⚠ y sugerencia',dg2.includes('g prot ⚠')&&dg2.includes('p. ej.')&&dg2.includes('g de skyr'));
+ ok('proteína GLP-1: la recomendación pide reforzar desayuno y cena',dg2.includes('refuerza el desayuno y la cena'));
+ await chk(w,'cr-renal'); w.generarPlan(); await tick(); const dr=$(w,'dietaContent').innerHTML;
+ ok('proteína GLP-1 + renal: no se comparan cifras con un objetivo ni se marcan comidas',!/g prot [✓↓]/.test(dr)&&!dr.includes('g prot ⚠'));
  console.log(res.join('\n')); console.log(res.filter(x=>x.startsWith('FALLA')).length+' fallos de '+res.length);
  process.exit(0);
 })().catch(e=>{console.log('ERROR',e);process.exit(1)});
